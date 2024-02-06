@@ -1,0 +1,14 @@
+{
+  "name": "@earepo/imp-xlsx",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "pnpm run clean && tsc",
+    "imp-xlsx-dev": "tsx watch src/imp-xlsx.ts"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
