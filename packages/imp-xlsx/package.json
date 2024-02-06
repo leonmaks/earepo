@@ -2,11 +2,14 @@
   "name": "@earepo/imp-xlsx",
   "private": true,
   "version": "0.0.1",
-  "type": "module",
+  "bin": {
+    "imp-xlsx": "dist/index.js"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "pnpm run clean && tsc",
-    "imp-xlsx-dev": "tsx watch src/imp-xlsx.ts"
+    "link-cli": "pnpm --global unlink imp-xlsx && pnpm --global link",
+    "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
     "xlsx": "^0.18.5"
