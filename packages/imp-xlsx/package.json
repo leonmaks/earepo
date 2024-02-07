@@ -7,9 +7,10 @@
   },
   "scripts": {
     "clean": "rimraf dist",
+    "dev": "tsx watch src/index.ts",
+    "watch": "tsc -w",
     "build": "pnpm run clean && tsc",
-    "link-cli": "pnpm --global unlink imp-xlsx && pnpm --global link",
-    "dev": "tsx watch src/index.ts"
+    "link-cli": "(pnpm --global unlink imp-xlsx || true) && pnpm --global link"
   },
   "dependencies": {
     "xlsx": "^0.18.5"
